@@ -247,6 +247,8 @@ func (s *PlaylistsService) List(
 		userID = s.client.userID
 	}
 
+	fmt.Println("123")
+
 	uri := fmt.Sprintf("users/%v/playlists/list", userID)
 	req, err := s.client.NewRequest(http.MethodGet, uri, nil)
 	if err != nil {
